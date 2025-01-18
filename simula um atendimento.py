@@ -1,15 +1,15 @@
 class Loja:
     def __init__(self):
-        # Simulação de catálogo de produtos com preços
+       
         self.produtos = {
             1: {'nome': 'Produto A', 'preco': 100},
             2: {'nome': 'Produto B', 'preco': 200},
             3: {'nome': 'Produto C', 'preco': 150},
             4: {'nome': 'Produto D', 'preco': 250},
         }
-        # Carrinho de compras do cliente
+        
         self.carrinho = []
-        # Desconto padrão
+       
         self.desconto = 0
 
     def exibir_produtos(self):
@@ -26,7 +26,7 @@ class Loja:
             print("Produto inválido! Tente novamente.")
 
     def aplicar_desconto(self):
-        if len(self.carrinho) >= 3:  # Se o cliente comprar 3 ou mais produtos, aplica 10% de desconto
+        if len(self.carrinho) >= 3:  
             self.desconto = 0.10
             print("Você ganhou 10% de desconto pela compra de 3 ou mais produtos!")
         else:
@@ -54,9 +54,8 @@ class Loja:
         self.exibir_resumo_compra()
         if self.carrinho:
             print("\nCompra finalizada com sucesso!")
-            self.carrinho = []  # Limpa o carrinho após a compra
-            self.desconto = 0  # Reseta o desconto
-
+            self.carrinho = []  
+            self.desconto = 0  
 def main():
     loja = Loja()
 
